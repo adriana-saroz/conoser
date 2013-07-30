@@ -1,8 +1,10 @@
-Conoser
+CoNoSer
 =======
 Web application that uses web real time communication to combine collaborative code editing and live video communication.
 
-In order to achieve consistency of concurrent changes it uses a text synchronization algorithm adapted for very large peer-to-peer networks. Most of the data transfer, including the text synchronization and audio/video streaming is done between peers (browser instances). The server component is completely eliminated from the synchronization process and video streaming thus proving small infrastructure costs and low latency.
+In order to achieve consistency of concurrent changes it uses a text synchronization algorithm (WOOT - Without Operational Transformations) adapted for very large peer-to-peer networks. Most of the data transfer, including the text synchronization and audio/video streaming is done between peers (browser instances). The server component is completely eliminated from the synchronization process and video streaming thus proving small infrastructure costs and low latency.
+
+CoNoSer stands for Collaboration with No Server.
 
 ### Install Guide ###
 * Install [Node.js](http://nodejs.org/).
