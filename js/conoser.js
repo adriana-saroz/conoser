@@ -57,6 +57,7 @@
     window.onload = function start() {
         $('#join-modal').modal();
         editor.getSession().on('change', editListener);
+        // TODO: test this interval
         // setInterval(WOOT.main, 100);
     }
 

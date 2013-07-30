@@ -266,7 +266,6 @@
             type: 'insert',
             wchar: wchar
         });
-            // new WOperation(wchar));
     }
 
     withoutPrecedence = function(prevId, nextId, subsequence) {

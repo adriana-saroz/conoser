@@ -1,4 +1,6 @@
 
+// TODO: comment this file!!
+
 var rtc = {};
 
 rtc.constraints = {video : true, audio : true};
@@ -30,9 +32,6 @@ rtc.isLeader = false;
 // if (room === '') {
 //     room = 'foo';
 // }
-
-// var localVideo = document.querySelector('#local-video');
-
 
 var socket = io.connect();
 socket.on('full_room', function (data){
@@ -115,14 +114,6 @@ rtc.connect = function(room, username) {
         rtc.localStream = stream;
         localVideo = addVideo(0);
         WebRTC.attachMediaStream(localVideo, stream);
-
-        // for (var i = 0; i < rtc.connections.length; i++) {
-        //     var connectionId = rtc.connections[i].id;
-        //     // rtc.createPeerConnection(connectionId);
-        //     rtc.addStream(connectionId);
-        //     // rtc.createDataChannel(connectionId);
-        //     rtc.sendOffer(connectionId);
-        // }
 
         // TODO: make connections before local stream is attached ? 
 

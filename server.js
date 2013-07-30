@@ -53,8 +53,6 @@ io.sockets.on('connection', function (socket) {
         var roomNr = rtc.rooms[data.room] || 0;
         roomNr++;
         rtc.rooms[data.room] = roomNr;
-        // TODO: clientId should be some other number, because at this point 
-        // if people go off and on again, the ids could be non-unique
 
         if (numClients == 0) {
             socket.username = data.username;
@@ -73,7 +71,6 @@ io.sockets.on('connection', function (socket) {
             socket.room = data.room;
             socket.join(data.room);
 
-            // TODO: send the current version of the document ?
             socket.emit('joined_room', {
                 socketId : socket.id,
                 userId : socket.userId,
